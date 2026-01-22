@@ -1,7 +1,7 @@
 public abstract class Employee {
     protected String name;
     protected int id;
-    protected double baseSalary;
+    protected double baseSalary = 25000;
 
     public Employee(String name, int id){
         this.name = name;
@@ -27,7 +27,9 @@ public abstract class Employee {
     }
 
     public void setId(int id){
-        this.id = id;
+        if(id > 0){
+            this.id = id;
+        }
     }
 
     public void setBaseSalary(double baseSalary) throws Vynimka {
